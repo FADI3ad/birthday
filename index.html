@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ليلي 💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@500;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --pink: #f4a7b9;
+            --deep: #e8637e;
+            --rose: #c94070;
+            --gold: #d4a04a;
+            --dark: #1a0812;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            background: radial-gradient(circle, #520b18 0%, #170105 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* ---- Stars Background ---- */
+        #stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: #fff;
+            animation: twinkle ease-in-out infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.1; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        /* ---- Floating Hearts ---- */
+        .hearts-bg {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .heart-float {
+            position: absolute;
+            top: -60px;
+            animation: heartFall linear infinite;
+            opacity: 0;
+        }
+        @keyframes heartFall {
+            0% { transform: translateY(-60px) rotateZ(0); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(110vh) rotateZ(360deg); opacity: 0; }
+        }
+
+        /* ---- Main Content ---- */
+        .home-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            max-width: 600px;
+        }
+
+        .home-content h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.6rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f4a7b9, #d4a04a, #f9c7d4, #d4a04a);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        @keyframes shimmer { to { background-position: 300% center; } }
+
+        .home-content p {
+            font-family: 'Patrick Hand', cursive;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.35rem;
+            line-height: 2.2;
+            margin-bottom: 4px;
+            text-shadow: 0 0 10px rgba(244, 167, 185, 0.2);
+        }
+
+        /* ---- Image ---- */
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border: 3px solid rgba(244, 167, 185, 0.6);
+            padding: 5px;
+            box-shadow: 0 10px 40px rgba(244, 167, 185, 0.25), 0 0 60px rgba(232, 99, 126, 0.15);
+            border-radius: 50%;
+            animation: imageFloat 3s ease-in-out infinite;
+            margin: 25px 0;
+            object-fit: cover;
+        }
+        @keyframes imageFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* ---- CTA Button ---- */
+        .cta-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 16px 55px;
+            border: 1px solid rgba(212, 160, 74, 0.6);
+            background: transparent;
+            color: var(--gold);
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+        .cta-btn:hover {
+            box-shadow: 0 0 40px rgba(212, 160, 74, 0.5);
+            border-color: var(--gold);
+            background: rgba(212, 160, 74, 0.1);
+            transform: scale(1.05);
+        }
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            animation: btnShine 2.5s ease-in-out infinite;
+        }
+        @keyframes btnShine {
+            0% { left: -100%; }
+            50%, 100% { left: 150%; }
+        }
+
+        /* ---- Glow Orb ---- */
+        .glow-orb {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(232, 99, 126, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+        @keyframes glowPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.4); opacity: 1; }
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 600px) {
+            .home-content h1 {
+                font-size: 2rem;
+            }
+            .home-content p {
+                font-size: 1.15rem;
+            }
+            .profile-img {
+                width: 160px;
+                height: 160px;
+            }
+            .cta-btn {
+                font-size: 1.3rem;
+                padding: 14px 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Stars -->
+    <div id="stars"></div>
+
+    <!-- Floating Hearts -->
+    <div class="hearts-bg" id="hearts-bg"></div>
+
+    <!-- Glow -->
+    <div class="glow-orb"></div>
+
+    <!-- Main Content -->
+    <div class="home-content">
+        <h1>قبل ما تدخلي يا ليلي… 👀❤️</h1>
+
+        <p>جوا المفاجأة دي</p>
+        <p>في شوية كلام من قلبي</p>
+        <p>وشوية ذكريات حلوة</p>
+        <p>معمولة مخصوص عشان تفرّحك يا ليلي 🎂✨</p>
+        <p>جاهزة تشوفيها؟ 💕</p>
+
+        <img class="profile-img" src="f.jpg" alt="ليلي" onerror="this.src='photo_2026-05-28_00-54-03.jpg'">
+
+        <a href="birthday_book_preview (1).html" class="cta-btn">✨ يلا بينا يا ليلي 🎁</a>
+    </div>
+
+    <script>
+        // Generate stars
+        const starsEl = document.getElementById('stars');
+        for (let i = 0; i < 120; i++) {
+            const s = document.createElement('div');
+            s.className = 'star';
+            const size = Math.random() * 3 + 1;
+            s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${size}px;height:${size}px;animation-duration:${Math.random()*4+2}s;animation-delay:${Math.random()*5}s;`;
+            starsEl.appendChild(s);
+        }
+
+        // Generate floating hearts
+        const heartsEl = document.getElementById('hearts-bg');
+        const heartEmojis = ['❤️', '💖', '💕', '💗', '💘', '🌸', '💮', '🌷'];
+        for (let i = 0; i < 18; i++) {
+            const h = document.createElement('div');
+            h.className = 'heart-float';
+            h.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+            h.style.cssText = `left:${Math.random()*100}%;font-size:${Math.random()*14+12}px;animation-duration:${Math.random()*8+6}s;animation-delay:${Math.random()*8}s;`;
+            heartsEl.appendChild(h);
+        }
+    </script>
+
+</body>
+</html>

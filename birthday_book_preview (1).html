@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ليلي 💕</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@500;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!-- BG -->
+<div id="stars"></div>
+<div id="petals"></div>
+
+<!-- SCENE -->
+<div id="scene">
+  <!-- Left elegant ribbon decoration -->
+  <div class="ribbon-decor left-ribbon">
+    <svg viewBox="-20 -20 140 240" fill="none" stroke="var(--pink)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 5px 10px rgba(0,0,0,0.4)); overflow: visible;">
+      <!-- Left loop -->
+      <path d="M 80 50 C 20 -10, -10 80, 80 60 Z" fill="rgba(244,167,185,0.15)" />
+      <!-- Right loop -->
+      <path d="M 80 50 C 130 0, 140 70, 80 60 Z" fill="rgba(244,167,185,0.15)" />
+      <!-- Tails -->
+      <path d="M 80 60 Q 50 140 70 210" />
+      <path d="M 80 60 Q 110 130 90 190" />
+      <!-- Knot -->
+      <circle cx="80" cy="55" r="8" fill="var(--pink)" />
+    </svg>
+  </div>
+
+  <!-- Right elegant ribbon decoration -->
+  <div class="ribbon-decor right-ribbon">
+    <svg viewBox="-20 -20 140 240" fill="none" stroke="var(--pink)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 5px 10px rgba(0,0,0,0.4)); overflow: visible;">
+      <!-- Left loop -->
+      <path d="M 20 50 C -30 0, -40 70, 20 60 Z" fill="rgba(244,167,185,0.15)" />
+      <!-- Right loop -->
+      <path d="M 20 50 C 80 -10, 110 80, 20 60 Z" fill="rgba(244,167,185,0.15)" />
+      <!-- Tails -->
+      <path d="M 20 60 Q -10 130 10 190" />
+      <path d="M 20 60 Q 50 140 30 210" />
+      <!-- Knot -->
+      <circle cx="20" cy="55" r="8" fill="var(--pink)" />
+    </svg>
+  </div>
+
+  <div class="title-container">
+    <h1 class="main-title" filter="url(#hand-drawn)">THESE ARE FOR YOU, LILY 💕</h1>
+  </div>
+
+  <!-- Icons Menu Grid -->
+  <div class="menu-container">
+    <!-- Camera icon -->
+    <div class="menu-item" onclick="openImagesScene()">
+      <div class="icon-wrapper">
+        <svg class="svg-icon" viewBox="0 0 24 24" fill="rgba(244,167,185,0.1)" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+          <circle cx="12" cy="13" r="4" fill="rgba(244,167,185,0.2)"></circle>
+        </svg>
+      </div>
+      <span class="menu-label">our memories</span>
+    </div>
+
+    <!-- Headphones icon -->
+    <div class="menu-item" onclick="openModal('music-modal')">
+      <div class="icon-wrapper">
+        <svg class="svg-icon" viewBox="0 0 24 24" fill="rgba(244,167,185,0.1)" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+          <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" fill="rgba(255,255,255,0.1)"></path>
+        </svg>
+      </div>
+      <span class="menu-label">our playlist</span>
+    </div>
+
+    <!-- Book icon (Letters) -->
+    <div class="menu-item" onclick="openLettersScene()">
+      <div class="icon-wrapper">
+        <svg class="svg-icon" viewBox="0 0 24 24" fill="rgba(244,167,185,0.1)" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </div>
+      <span class="menu-label">love letters</span>
+    </div>
+
+    <!-- Gift Box icon -->
+    <div class="menu-item" onclick="openModal('gift-modal')">
+      <div class="icon-wrapper">
+        <svg class="svg-icon" viewBox="0 0 24 24" fill="rgba(244,167,185,0.1)" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="8" width="18" height="4" rx="1" ry="1"></rect>
+          <path d="M12 8v13"></path>
+          <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path>
+          <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path>
+        </svg>
+      </div>
+      <span class="menu-label">sweet surprise</span>
+    </div>
+  </div>
+
+  <div class="home-container">
+    <span class="home-btn" onclick="restart()" filter="url(#hand-drawn)">HOME</span>
+  </div>
+</div>
+
+<!-- LETTERS SCENE -->
+<div id="letters-scene" style="display:none; position:fixed; inset:0; z-index:20; background:radial-gradient(circle at center, #3d1423 0%, #0a0103 100%); opacity:0; transition: opacity 0.8s ease;">
+  <!-- luxurious pattern overlay -->
+  <div style="position:absolute; inset:0; background: url('data:image/svg+xml,%3Csvg width=\\'120\\' height=\\'120\\' viewBox=\\'0 0 120 120\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cpath d=\\'M60 0 C70 40 120 60 120 60 C70 80 60 120 60 120 C50 80 0 60 0 60 C50 40 60 0 60 0 Z\\' fill=\\'rgba(244, 167, 185, 0.04)\\'/%3E%3C/svg%3E'); background-size: 150px; pointer-events:none;"></div>
+  
+  <div class="glow-orb" style="position:absolute; top:55%; left:50%; transform:translate(-50%, -50%); width:60vw; height:60vw; max-width:600px; max-height:600px; background:radial-gradient(circle, rgba(244,167,185,0.15) 0%, transparent 60%); pointer-events:none; z-index:1; animation: pulseGlow 4s infinite alternate;"></div>
+
+  <!-- LASER HEART CONTAINER -->
+  <div id="laser-heart-container" style="display:none; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:280px; height:280px; z-index:50;">
+    <svg viewBox="0 0 200 200" style="width:100%; height:100%; overflow:visible;">
+      <path id="laser-heart-path" d="M 100 170 C 100 170, 20 110, 20 60 C 20 20, 90 20, 100 60 C 110 20, 180 20, 180 60 C 180 110, 100 170, 100 170 Z" 
+            fill="none" stroke="#ff0044" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+            style="filter: drop-shadow(0 0 15px #ff0044); stroke-dasharray: 800; stroke-dashoffset: 800;"></path>
+    </svg>
+  </div>
+
+  <div style="position:absolute; top:20px; right:20px; z-index:100;">
+     <button class="home-btn" onclick="closeLettersScene()" style="background:transparent;border:none;font-size:1.5rem;color:#f4a7b9;cursor:pointer;font-family:'Architects Daughter', cursive; text-shadow: 0 0 10px rgba(244,167,185,0.5);">✕ back</button>
+  </div>
+  
+  <p class="envelope-hint" style="position:absolute; top:12%; left:50%; transform:translateX(-50%); color:#f4a7b9; font-family:'Architects Daughter', cursive; font-size:1.8rem; opacity:0; pointer-events:none; text-shadow: 0 0 15px rgba(244,167,185,0.8); white-space:nowrap; z-index:2;">إليكِ رسائلي يا ليلي.. اضغطي لتفتحي قلبي 💌</p>
+
+  <div class="envelope-wrapper" style="z-index:10; opacity:0;">
+    <div class="envelope" onclick="openEnvelope()">
+      <div class="envelope-back"></div>
+      <div class="letters-container">
+        <div class="draggable-letter" data-rot="-2" style="z-index:3;">
+          <h3 class="ph">حبيبتي ليلي...</h3>
+          <div class="div" style="margin-bottom: 12px; background:linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);"></div>
+          <div class="verse" style="color:#444;">
+            <span>"كل سنة وانتي قلبي وفرحتي يا ليلي وأحلى صدفة دخلت حياتي…</span>
+            <span>ربنا يديم ضحكتك يا ليلي ويحققلك كل اللي نفسك فيه،</span>
+          </div>
+        </div>
+        <div class="draggable-letter" data-rot="1" style="z-index:2;">
+          <h3 class="ph">بموووت فيكي يا ليلي </h3>
+          <div class="div" style="margin-bottom: 12px; background:linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);"></div>
+          <ul class="ll" style="color:#444; text-align:center;">
+              <li style="color:#444;"><em>♥</em>النهاردة مش يوم عادي…</li>
+              <li style="color:#444;"><em>♥</em>النهاردة اليوم اللي اتولدت فيه ليلي، البنت اللي خلت للحياة طعم تاني بالنسبالي</li>
+              <li style="color:#444;"><em>♥</em>كل سنة وانتي بخير يا ليلي يا أجمل شخص عرفته</li>
+          </ul>
+        </div>
+        <div class="draggable-letter" data-rot="-1" style="z-index:1;">
+          <h3 class="ph">أمنيتي لكِ يا ليلي...</h3>
+          <div class="div" style="margin-bottom: 12px; background:linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);"></div>
+          <div class="verse" style="color:#444;">
+            <span>أتمنى إنك يا ليلي تكوني دائماً سعيدة ومبتسمة</span>
+            <span>وأن نحتفل معاً بكل أعيادكِ القادمة يا حبيبتي</span>
+          </div>
+          <p class="sig" style="font-family:'Dancing Script',cursive;color:var(--pink);font-size:1.45rem;text-align:center;margin-top:15px;font-weight:bold;">~ حبيبكِ دائماً يا ليلي 💕</p>
+        </div>
+      </div>
+      <div class="envelope-front"></div>
+      <div class="envelope-flap" id="env-flap">
+        <div class="wax-seal"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---- MODALS & SCENES ---- -->
+
+<!-- IMAGES SCENE -->
+<div id="images-scene" class="header" style="display:none; position:fixed; inset:0; z-index:20; opacity:0; transition: opacity 0.8s ease; overflow-y:auto; height:100vh;">
+  <div style="position:absolute; top:20px; right:20px; z-index:1000;">
+     <button class="home-btn" onclick="closeImagesScene()" style="background:transparent;border:none;font-size:1.5rem;color:#6b0707;cursor:pointer;font-family:'Architects Daughter', cursive; text-shadow: 0 0 10px rgba(255,255,255,0.8);">✕ back</button>
+  </div>
+  
+  <h1 class="head" style="margin-top:20px;">HAPPY BIRTHDAY LILY 💕</h1>
+  <div style="z-index:1; position:relative;">
+    <img class="img1" src="img1.jpg" onerror="this.src='photo_2026-05-28_01-14-01.jpg'">
+  </div>
+  <div style="z-index:1; position:relative;">
+    <img class="img2" src="img2.jpg" onerror="this.src='photo_2026-05-28_01-13-28.jpg'">
+  </div>
+</div>
+
+<!-- 2. Playlist Modal -->
+<div id="music-modal" class="modal">
+  <div class="modal-content" filter="url(#hand-drawn)">
+    <button class="close-modal" onclick="closeModal('music-modal')">✕</button>
+    <h2 class="modal-title">our playlist 🎶 ليلي</h2>
+    <div class="div"></div>
+    
+    <div class="playlist-player">
+      <div class="vinyl-record">
+        <div class="vinyl-center"></div>
+      </div>
+      
+      <div class="track-info">
+        <h3 class="track-title">Beautiful Dream 🎵</h3>
+        <p class="track-artist">A Song For Lily 💕</p>
+      </div>
+      
+      <audio id="bg-music" loop>
+        <source src="12Rq714f_[cut_141sec].mp3" type="audio/mpeg">
+      </audio>
+      
+      <div class="player-controls">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">▶</button>
+        <div class="music-progress-bar" onclick="seekAudio(event)">
+          <div class="music-progress" id="music-progress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 4. Gift Modal -->
+<div id="gift-modal" class="modal">
+  <div class="modal-content" filter="url(#hand-drawn)">
+    <button class="close-modal" onclick="closeModal('gift-modal')">✕</button>
+    <h2 class="modal-title">sweet surprise يا ليلي 🎁</h2>
+    <div class="div"></div>
+    
+    <div class="cakebox">
+      <h2>كل عام وأنتِ أجمل يا ليلي 🎂</h2>
+      <div class="div"></div>
+      
+      <svg viewBox="0 0 130 120" xmlns="http://www.w3.org/2000/svg" style="width:120px;margin:10px auto;display:block;cursor:pointer;">
+        <g class="cw">
+        <ellipse cx="65" cy="113" rx="50" ry="7" fill="rgba(0,0,0,0.12)"/>
+        <rect x="10" y="76" width="110" height="34" rx="8" fill="#f4a7b9"/>
+        <ellipse cx="65" cy="76" rx="55" ry="11" fill="#e8637e"/>
+        <path d="M10,76 Q18,70 26,78 Q34,70 42,78 Q50,70 58,78 Q66,70 74,78 Q82,70 90,78 Q98,70 106,78 Q114,70 120,76" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="30" cy="81" r="5" fill="#c00035"/><circle cx="65" cy="79" r="4.5" fill="#c00035"/><circle cx="100" cy="81" r="5" fill="#c00035"/>
+        <rect x="26" y="48" width="78" height="30" rx="7" fill="#fac7d4"/>
+        <ellipse cx="65" cy="48" rx="39" ry="8" fill="#e8637e"/>
+        <path d="M26,48 Q34,43 42,50 Q50,43 58,50 Q66,43 74,50 Q82,43 90,50 Q98,44 104,48" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+        <rect x="42" y="24" width="46" height="26" rx="6" fill="#fde8d8"/>
+        <ellipse cx="65" cy="24" rx="23" ry="6" fill="#e8637e"/>
+        <path d="M42,24 Q50,19 58,26 Q66,19 74,26 Q80,20 88,24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <!-- Candles -->
+        <g onclick="blowCandle(1)">
+          <rect x="53" y="10" width="6" height="16" rx="2" fill="#c94070"/>
+          <ellipse cx="56" cy="9" rx="3.5" ry="5" fill="#FFD700" class="fl" id="flame-1"/>
+        </g>
+        <g onclick="blowCandle(2)">
+          <rect x="62" y="6" width="6" height="20" rx="2" fill="#d4a04a"/>
+          <ellipse cx="65" cy="5" rx="3.5" ry="5" fill="#FF8C00" class="fl2" id="flame-2"/>
+        </g>
+        <g onclick="blowCandle(3)">
+          <rect x="71" y="10" width="6" height="16" rx="2" fill="#c94070"/>
+          <ellipse cx="74" cy="9" rx="3.5" ry="5" fill="#FFD700" class="fl3" id="flame-3"/>
+        </g>
+        </g>
+      </svg>
+      <p class="blow-hint" style="font-size:0.8rem;opacity:0.8;margin-bottom:8px;font-style:italic;color:var(--pink);">🕯 اضغطي على الشموع لتطفئيها</p>
+      
+      <p>في يوم ميلادكِ يا ليلي أتمنى أن يكون<br>كل حلم في قلبكِ حقيقة 🌷</p>
+      <div class="div"></div>
+      <p style="font-size: 0.95rem; color: var(--pink); font-family: 'Architects Daughter', cursive;">أتمنى إنك يا ليلي تكوني دائماً سعيدة ومبتسمة 💕</p>
+    </div>
+  </div>
+</div>
+
+<!-- SVG filter definition for hand-drawn chalk wobbly effect -->
+<svg style="position: absolute; width: 0; height: 0;">
+  <defs>
+    <filter id="hand-drawn" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+</svg>
+
+<script src="script.js"></script>
+</body>
+</html>
